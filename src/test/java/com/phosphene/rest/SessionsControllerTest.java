@@ -30,6 +30,7 @@ import com.jayway.restassured.response.Response;
 import static com.jayway.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.nullValue;
+import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import com.jayway.restassured.filter.log.ResponseLoggingFilter;
@@ -68,7 +69,9 @@ public class SessionsControllerTest {
             when().
             post(restString).
             then().
-            body("sessions[0].email", equalTo("dobbs@test.com"));
+            body("sessions[0].email", equalTo("dobbs@test.com")).
+            assertThat().header("Set-Cookie", nullValue()).
+            assertThat().header("x-auth-token", notNullValue());
         
     }
 
