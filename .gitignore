@@ -1,0 +1,22 @@
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# general
+.classpath
+.project
+.settings/
+target/
+*.class
+*.log
+
+# elasticsearch
+data/
+
+#emacs-en
+*~
+\#*\#
+auto-save-list
+tramp
+.\#*
