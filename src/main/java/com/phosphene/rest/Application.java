@@ -36,8 +36,13 @@ public class Application extends SpringBootServletInitializer {
 	}
 
     @Bean
+    public HeaderHttpSessionStrategy cookieHttpSessionStrategy() {
+        return new HeaderHttpSessionStrategy();
+    }
+
+    @Bean
     public JedisConnectionFactory connectionFactory() {
         return new JedisConnectionFactory();
     }
-   
+
 }
