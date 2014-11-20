@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.embedded.EmbeddedWebApplicationContext;
 import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.boot.test.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
@@ -48,7 +47,7 @@ public class SessionsControllerTest {
     private UserRepository repository;
     private User user;
     private Role role;
-    private RestTemplate restTemplate =new TestRestTemplate();
+
     @Value("${local.server.port}")  
     int port;
 
