@@ -1,6 +1,9 @@
 Spring Boot Jersey REST API
 =====================
 
+This is a minimal project that consists of Spring Boot, Jersey, and Spring Sessions Library with tests to prove that sessions management is functional.
+
+
 # Build
 
 * Oracle [Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 7
