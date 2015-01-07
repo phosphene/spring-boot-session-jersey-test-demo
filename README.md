@@ -21,4 +21,4 @@ The tests are focused on integration tests.
 
 The test framework is RestAssured
 
-The current minimal test proves that sessions based authentication works but that it uses a cookie strategy rather than a header strategy as is defined in the security config.
+The current minimal test now proves that sessions based authentication works now proves that a header strategy is in place and functional.
